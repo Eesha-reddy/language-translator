@@ -1,161 +1,226 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
-  min-height: 100vh;
-  background: #405D72;
-}
-.container{
-  max-width: 690px;
-  width: 100%;
-  padding: 30px;
-  background: #FFF8F3;
-  border-radius: 7px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.01);
-}
-.wrapper{
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-.wrapper .text-input{
-  display: flex;
-  border-bottom: 1px solid #ccc;
-}
-.text-input .to-text{
-  border-radius: 0px;
-  border-left: 1px solid #ccc;
-}
-.text-input textarea{
-  height: 250px;
-  width: 100%;
-  border: none;
-  outline: none;
-  resize: none;
-  background: none;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 5px;
-}
-.text-input textarea::placeholder{
-  color: #b7b6b6;
-}
-.controls, li, .icons, .icons i{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.controls{
-  list-style: none;
-  padding: 12px 15px;
-}
-.controls .row .icons{
-  width: 38%;
-}
-.controls .row .icons i{
-  width: 50px;
-  color: #adadad;
-  font-size: 14px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  justify-content: center;
-}
-.controls .row.from .icons{
-  padding-right: 15px;
-  border-right: 1px solid #ccc;
-}
-.controls .row.to .icons{
-  padding-left: 15px;
-  border-left: 1px solid #ccc;
-}
-.controls .row select{
-  color: #333;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  background: none;
-  padding-left: 5px;
-}
-.text-input textarea::-webkit-scrollbar{
-  width: 4px;
-}
-.controls .row select::-webkit-scrollbar{
-  width: 8px;
-}
-.text-input textarea::-webkit-scrollbar-track,
-.controls .row select::-webkit-scrollbar-track{
-  background: #fff;
-}
-.text-input textarea::-webkit-scrollbar-thumb{
-  background: #ddd;
-  border-radius: 8px;
-}
-.controls .row select::-webkit-scrollbar-thumb{
-  background: #999;
-  border-radius: 8px;
-  border-right: 2px solid #ffffff;
-}
-.controls .exchange{
-  color: #adadad;
-  cursor: pointer;
-  font-size: 16px;
-  transition: transform 0.2s ease;
-}
-.controls i:active{
-  transform: scale(0.9);
-}
-.container button{
-  width: 100%;
-  padding: 14px;
-  outline: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  margin-top: 20px;
-  font-size: 17px;
-  border-radius: 5px;
-  background: #758694;
-}
-
-@media (max-width: 660px){
-  .container{
-    padding: 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
   }
-  .wrapper .text-input{
-    flex-direction: column;
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-height: 100vh;
+    background: #405D72;
   }
-  .text-input .to-text{
-    border-left: 0px;
-    border-top: 1px solid #ccc;
+  
+  .container {
+    max-width: 690px;
+    width: 100%;
+    padding: 30px;
+    background: #FFF8F3;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
   }
-  .text-input textarea{
-    height: 200px;
+  
+  .wrapper {
+    border-radius: 5px;
+    border: 1px solid #ccc;
   }
-  .controls .row .icons{
-    display: none;
+  
+  .wrapper .text-input {
+    display: flex;
+    border-bottom: 1px solid #ccc;
   }
-  .container button{
-    padding: 13px;
+  
+  .text-input .to-text {
+    border-radius: 0px;
+    border-left: 1px solid #ccc;
+  }
+  
+  .text-input textarea {
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .text-input textarea::placeholder {
+    color: #b7b6b6;
+  }
+  
+  .controls,
+  li,
+  .icons,
+  .icons i {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .controls {
+    list-style: none;
+    padding: 12px 0px;
+  }
+  
+  .controls .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .controls .row .icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .controls .row .icons i {
+    color: #adadad;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin: 0 5px;
+  }
+  
+  .controls .row.from .icons {
+    padding-right: 15px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .controls .row.to .icons {
+    padding-left: 15px;
+    border-left: 1px solid #ccc;
+  }
+  
+  .controls .row select {
+    color: #333;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: none;
+    padding-left: 5px;
+  }
+  
+  .text-input textarea::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .controls .row select::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .text-input textarea::-webkit-scrollbar-track,
+  .controls .row select::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  .text-input textarea::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 8px;
+  }
+  
+  .controls .row select::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 8px;
+    border-right: 2px solid #ffffff;
+  }
+  
+  .controls .exchange {
+    color: #adadad;
+    cursor: pointer;
     font-size: 16px;
+    transition: transform 0.2s ease;
   }
-  .controls .row select{
-    font-size: 16px;
+  
+  .controls i:active {
+    transform: scale(0.9);
   }
-  .controls .exchange{
-    font-size: 14px;
+  
+  .container button {
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: #758694;
   }
-}
+  
+  @media (max-width: 660px) {
+    .container {
+      padding: 20px;
+    }
+    .wrapper .text-input {
+      flex-direction: column;
+    }
+    .text-input .to-text {
+      border-left: 0px;
+      border-top: 1px solid #ccc;
+    }
+    .text-input textarea {
+      height: 200px;
+    }
+    .controls .row {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .controls .row .icons {
+      flex: 0 0 auto;
+    }
+    .controls .row .icons i {
+      margin-right: 10px;
+    }
+    .controls .row select {
+      flex: 1;
+      padding: 0px;
+      margin: 0px 5px;
+    }
+    .controls .row .icons i.fa-copy {
+      display: none;
+    }
+    .container button {
+      padding: 13px;
+      font-size: 16px;
+    }
+    .controls .row select {
+      font-size: 16px;
+    }
+    .controls .exchange {
+      font-size: 14px;
+    }
 
-h1{
+    .controls .row.from .icons{
+        padding-right: 0px;
+        margin: 0px;
+        border: 0px;
+    }
+
+    .controls .row.to .icons{
+        padding-left: 0px;
+        margin: 0px;
+        border: 0px;
+    }
+    
+    
+  }
+  
+  h1 {
     font-size: 30px;
     text-align: center;
     color: #45474B;
-}
+    margin-bottom: 5px;
+  }
+  
+
+ 
